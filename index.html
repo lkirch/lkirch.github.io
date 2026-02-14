@@ -60,6 +60,45 @@
         .publication:last-child {
             border-bottom: none;
         }
+        
+        /* Certifications styles */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .cert-item {
+            border: 1px solid var(--border, #ddd);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cert-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .cert-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .cert-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .cert-item p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+        .cert-item .cert-org {
+            font-weight: 600;
+            color: var(--links, #0076d1);
+        }
+        
         footer {
             text-align: center;
             padding: 40px 0 20px 0;
@@ -150,6 +189,38 @@
                 savings insights.
             </p>
             <p><a href="https://github.com/lkirch/energy-dashboard" target="_blank">View Project →</a></p>
+        </div>
+    </section>        
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <p>
+            Completed intensive, project-based courses covering end-to-end ML workflows and LLM application 
+            development, with hands-on projects available in my repositories.
+        </p>
+        
+        <div class="cert-grid">
+            <div class="cert-item">
+                <a href="images/20251102-LK-LLMZoomcamp-certificate-4d53cb.pdf" target="_blank">
+                    <img src="images/20251102-LK-LLMZoomcamp-certificate-4d53cb.png" alt="LLM Zoomcamp Certificate" class="cert-image">
+                </a>
+                <h3>LLM Zoomcamp</h3>
+                <p class="cert-org">DataTalks.Club</p>
+                <p>Comprehensive course on building LLM applications including RAG systems, prompt engineering, 
+                   vector databases, and evaluation techniques. Final project: ScienceSage RAG system.</p>
+                <p><a href="https://github.com/lkirch/ScienceSage" target="_blank">View Capstone Project →</a></p>
+            </div>
+
+            <div class="cert-item">
+                <a href="images/20220202-LK-MLZoomcamp-certificate-AF6A08.pdf" target="_blank">
+                    <img src="images/20220202-LK-MLZoomcamp-certificate-AF6A08.png" alt="ML Zoomcamp Certificate" class="cert-image">
+                </a>
+                <h3>Machine Learning Zoomcamp</h3>
+                <p class="cert-org">DataTalks.Club</p>
+                <p>Hands-on ML engineering course covering supervised learning, deep learning, computer vision, 
+                   model deployment, and MLOps. Final project: Fire detection computer vision model.</p>
+                <p><a href="https://github.com/lkirch/ml-zoomcamp/tree/main/ml-zoomcamp-final" target="_blank">View Capstone Project →</a></p>
+            </div>
         </div>
     </section>
 
